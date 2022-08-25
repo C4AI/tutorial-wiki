@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Instalação e Configuração &#8212; Tutorial Wiki</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Escrevendo na Wiki" href="../EscrevendoNaWiki/EscrevendoNaWiki.html" />
+    <link rel="prev" title="Contas, grupos e permissões" href="../SobreMediaWiki/ContasGruposPermissoes.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Tutorial Wiki</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../Introducao.html">
+                    Introdução
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../SobreMediaWiki/SobreMediaWiki.html">
+   Sobre o MediaWiki
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../SobreMediaWiki/LayoutSkins.html">
+     Layout da Wiki e Skins
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../SobreMediaWiki/Estrutura.html">
+     Estrutura de uma Wiki
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../SobreMediaWiki/Formato.html">
+     Formato de escrita
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../SobreMediaWiki/Extensoes.html">
+     Extensões
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../SobreMediaWiki/Templates.html">
+     Templates ou Predefinições
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../SobreMediaWiki/ExportImport.html">
+     Exportação e Importação de páginas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../SobreMediaWiki/ContasGruposPermissoes.html">
+     Contas, grupos e permissões
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Instalação e Configuração
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../EscrevendoNaWiki/EscrevendoNaWiki.html">
+   Escrevendo na Wiki
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/GerenciarConta.html">
+     Gerenciar conta
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/CriarPagina.html">
+     Gerencia
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/EditarPagina.html">
+     Como editar uma página?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/ExcluirPagina.html">
+     Como excluir uma página?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/FormatarTexto.html">
+     Como formatar o texto?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/InserirMidia.html">
+     Como inserir uma imagem ou mídia?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/InserirLink.html">
+     Como inserir um link?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/InserirRef.html">
+     Como inserir as referências?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/InserirNre.html">
+     Como inserir uma nota de rodapé?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/InserirTemplate.html">
+     Como inserir um template ou predefinição?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/InserirHint.html">
+     Como inserir uma hint?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/InserirTabela.html">
+     Como inserir uma tabela?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/InserirComentario.html">
+     Como inserir um comentário?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/InserirGaleria.html">
+     Como inserir uma galeria?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/InserirBlocoCodigo.html">
+     Como inserir um bloco de código?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../EscrevendoNaWiki/VigiarPagina.html">
+     Como vigiar uma página?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/InstalacaoConfiguracao/InstalacaoConfiguracao.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requisitos-de-instalacao">
+   Requisitos de instalação
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#baixando-o-software-do-mediawiki">
+   Baixando o software do MediaWiki
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extraindo-o-software-do-mediawiki">
+   Extraindo o software do MediaWiki
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fazendo-o-upload-dos-arquivos-para-o-web-server">
+   Fazendo o upload dos arquivos para o web server
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-a-base-de-dados">
+   Configure a base de dados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#execute-o-script-de-instalacao">
+   Execute o script de instalação
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuracao-adicional">
+   Configuração adicional
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certificado-ssl">
+     Certificado SSL
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#skin">
+     Skin
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wgdbserver">
+     $wgDBServer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extensoes">
+     Extensões
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#templates">
+     Templates
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Instalação e Configuração</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requisitos-de-instalacao">
+   Requisitos de instalação
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#baixando-o-software-do-mediawiki">
+   Baixando o software do MediaWiki
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extraindo-o-software-do-mediawiki">
+   Extraindo o software do MediaWiki
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fazendo-o-upload-dos-arquivos-para-o-web-server">
+   Fazendo o upload dos arquivos para o web server
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-a-base-de-dados">
+   Configure a base de dados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#execute-o-script-de-instalacao">
+   Execute o script de instalação
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configuracao-adicional">
+   Configuração adicional
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#certificado-ssl">
+     Certificado SSL
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#skin">
+     Skin
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wgdbserver">
+     $wgDBServer
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extensoes">
+     Extensões
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#templates">
+     Templates
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="instalacao-e-configuracao">
+<span id="instalacaoconfiguracao"></span><h1>Instalação e Configuração<a class="headerlink" href="#instalacao-e-configuracao" title="Permalink to this headline">#</a></h1>
+<p>Para criar uma wiki sua, é necessário instalar e configurar o MediaWiki. Para isso, basta seguir o próprio <a class="reference external" href="https://www.mediawiki.org/wiki/Manual:Installing_MediaWiki">guia de instalação</a>, que explica sobre</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.mediawiki.org/wiki/Manual:Installation_requirements">Requisitos de instalação</a></p></li>
+<li><p><a class="reference external" href="https://www.mediawiki.org/wiki/Download">Baixando o software do MediaWiki</a></p></li>
+<li><p><a class="reference external" href="https://www.mediawiki.org/wiki/Manual:Installing_MediaWiki#Extract_the_MediaWiki_software">Extraindo o software do MediaWiki</a></p></li>
+<li><p><a class="reference external" href="hhttps://www.mediawiki.org/wiki/Manual:Installing_MediaWiki#Upload_files_to_your_web_server">Fazendo o upload dos arquivos para o web server</a></p></li>
+<li><p><a class="reference external" href="https://www.mediawiki.org/wiki/Manual:Installing_MediaWiki#Set_up_the_database">Configure a base de dados</a></p></li>
+<li><p><a class="reference external" href="https://www.mediawiki.org/wiki/Manual:Config_script">Execute o script de instalação</a></p></li>
+<li><p><a class="reference external" href="https://www.mediawiki.org/wiki/Manual:System_administration#Configuration">Configuração adicional</a></p></li>
+</ul>
+<section id="requisitos-de-instalacao">
+<h2>Requisitos de instalação<a class="headerlink" href="#requisitos-de-instalacao" title="Permalink to this headline">#</a></h2>
+<p>São necessários:</p>
+<ul class="simple">
+<li><p>Um web server</p></li>
+<li><p>PHP para suportar o MediaWiki</p></li>
+<li><p>Um software de base de dados</p></li>
+</ul>
+<p>A WMF recomenda usar</p>
+<ul class="simple">
+<li><p>Web server: Apache</p></li>
+<li><p>Software de DB: MariaDB</p></li>
+</ul>
+<p>Assim, esses todos, mais o PHP, podem ser instalados em um servidor Linux com a linha de comando</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt-get install php php-apcu php-intl php-mbstring php-xml php-mysql php-calendar mariadb-server apache2
+</pre></div>
+</div>
+<p>onde <code class="docutils literal notranslate"><span class="pre">sudo</span></code> é o comando do Linux que permite a um usuário normal do computador executar ações que precisam de privilégios mais altos, <code class="docutils literal notranslate"><span class="pre">apt-get</span></code> é um comando que serve para gerenciar pacotes do Linux, <code class="docutils literal notranslate"><span class="pre">install</span></code> significa que você está instalando um pacote e os outros termos a seguir são os pacotes que você instalará.</p>
+<p>Para o Apache funcionar corretamente com HTTPS, é bom usar o comando</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo ufw allow <span class="s1">&#39;Apache Full&#39;</span>
+</pre></div>
+</div>
+<p>onde <code class="docutils literal notranslate"><span class="pre">ufw</span></code> é o comando para gerenciar o firewall do ubuntu e <code class="docutils literal notranslate"><span class="pre">allow</span></code>dá permissão completa para o Apache por meio do firewall do servidor, incluindo para requisições HTTPS.</p>
+<p>Ainda, pode ser útil instalar também no servidor o ImageMagick e o TeX:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo apt-get install imagemagick texlive
+</pre></div>
+</div>
+</section>
+<section id="baixando-o-software-do-mediawiki">
+<h2>Baixando o software do MediaWiki<a class="headerlink" href="#baixando-o-software-do-mediawiki" title="Permalink to this headline">#</a></h2>
+<p>Para baixar o software, basta ir na página da lista no topo  da página e baixar o arquivo compactado.</p>
+</section>
+<section id="extraindo-o-software-do-mediawiki">
+<h2>Extraindo o software do MediaWiki<a class="headerlink" href="#extraindo-o-software-do-mediawiki" title="Permalink to this headline">#</a></h2>
+<p>Para extrair (descompactar) os arquivos do software, basta usar</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>tar -xf mediawiki-*.tar.gz
+</pre></div>
+</div>
+<p>onde <code class="docutils literal notranslate"><span class="pre">tar</span></code> (Tape ARchiver) é um comando para descompactar arquivos, <code class="docutils literal notranslate"><span class="pre">-xf</span></code> é o <em>modo de operação</em>, no qual o <code class="docutils literal notranslate"><span class="pre">x</span></code> indica que o <code class="docutils literal notranslate"><span class="pre">tar</span></code> deve extrair um arquivo e o <code class="docutils literal notranslate"><span class="pre">f</span></code> indica que você está especificando qual arquivo deve ser manipulado. Por fim, <code class="docutils literal notranslate"><span class="pre">mediawiki-*.tar.gz</span></code> é o nome do arquivo compactado que você baixou, com a diferença de que o arquivo baixado possui, no lugar do asterisco, a versão do software, mas não é necessário especificar essa versão no comando, basta deixar o asterisco.</p>
+</section>
+<section id="fazendo-o-upload-dos-arquivos-para-o-web-server">
+<h2>Fazendo o upload dos arquivos para o web server<a class="headerlink" href="#fazendo-o-upload-dos-arquivos-para-o-web-server" title="Permalink to this headline">#</a></h2>
+<p>Cada software de <em>web server</em> especifica de uma forma diferente em qual diretório os arquivos do site (ou dos sites) devem estar, bem como as outras configurações do servidor. No caso do Apache, há um arquivo de configuração principal chamado <code class="docutils literal notranslate"><span class="pre">apache2.conf</span></code> ou <code class="docutils literal notranslate"><span class="pre">httpd.conf</span></code> (depende do OS). Ainda, há uma pasta chamada <code class="docutils literal notranslate"><span class="pre">sites-available</span></code> com um arquivo <code class="docutils literal notranslate"><span class="pre">000-default.conf</span></code> que possui configurações para cada site que está naquele <em>web server</em>.</p>
+<p>Local do arquivo 000-default.conf:</p>
+<p><img alt="Print do console linux mostrando o uso de comandos cd para chegar no arquivo /etc/apache2/sites-available/000-default.conf." src="../_images/Local_apache_conf.png" /></p>
+<p>Conteúdo do arquivo <code class="docutils literal notranslate"><span class="pre">000-default.conf</span></code>, com a diretiva <code class="docutils literal notranslate"><span class="pre">DocumentRoot</span></code>, no qual devem estar os arquivos do site:</p>
+<p><img alt="Print do console linux mostrando o conteúdo do arquivo 000-default.conf. Nele, vê-se as diretivas ServerAdmin, DocumentRoot e ServerName." src="../_images/apache_conf.png" /></p>
+<p>No caso, o diretório raiz do site está configurado como <code class="docutils literal notranslate"><span class="pre">/var/www/html</span></code> e o nome do servidor como <code class="docutils literal notranslate"><span class="pre">c2dt02.duckdns.org</span></code>, então ao colocar um arquivo chamado <code class="docutils literal notranslate"><span class="pre">exemplo.pdf</span></code> dentro desse diretório, ele poderá ser acessado como <code class="docutils literal notranslate"><span class="pre">c2dt02.duckdns.org/exemplo.pdf</span></code> e, ao colocar nesse diretório a pasta descompactada do MediaWiki, por exemplo com o nome <code class="docutils literal notranslate"><span class="pre">wiki</span></code>, a wiki será acessível em <code class="docutils literal notranslate"><span class="pre">www.exemplo.com/wiki/</span></code></p>
+<p>É importante lembrar que, para a wiki ser acessível pela internet, não basta ter um servidor com o MediaWiki instalado, é necessário também possuir um domínio, como o <code class="docutils literal notranslate"><span class="pre">c2dt02.duckdns.org</span></code>.</p>
+</section>
+<section id="configure-a-base-de-dados">
+<h2>Configure a base de dados<a class="headerlink" href="#configure-a-base-de-dados" title="Permalink to this headline">#</a></h2>
+<p>Antes de instalar o MediaWiki, é necessário configurar a base de dados que será usada pelo MediaWiki.</p>
+<p>Se você estiver em um novo servidor em que acabou de instalar o MariaDB, então pode ser necessário primeiro configurar a senha root.</p>
+<p>Em seguida, já estando no MariaDB, pode-se, por exemplo, criar uma base de dados chamada <code class="docutils literal notranslate"><span class="pre">my_wiki</span></code> e um usuário <code class="docutils literal notranslate"><span class="pre">wikiuser</span></code>:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">my_wiki</span><span class="p">;</span><span class="w"></span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;wikiuser&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;database_password&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">my_wiki</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;wikiuser&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">GRANT</span><span class="w"> </span><span class="k">OPTION</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="execute-o-script-de-instalacao">
+<h2>Execute o script de instalação<a class="headerlink" href="#execute-o-script-de-instalacao" title="Permalink to this headline">#</a></h2>
+<p>Com os requisitos instalados e colocados no devido diretório e a base de dados criada, pode-se de fato instalar o software do MediaWiki. Para isso, basta acessar o site, seja por meio do domínio (caso haja) ou diretamente pelo <code class="docutils literal notranslate"><span class="pre">localhost</span></code>. O script de instalação perceberá que não há o arquivo de configuração do MediaWiki (<code class="docutils literal notranslate"><span class="pre">LocalSettings.php</span></code>) e pedirá que a wiki seja configurada primeiro (clicar no hiperlink).</p>
+<p><img alt="A imagem mostra, de cima para baixo, a logo em forma de girassol do MediaWiki, o nome e a versão do software em negrito, MediaWiki 1.37.1, e os dizeres LocalSettings.php not found. Please set up the wiki first. Há um hiperlink na última frase que leva para o script de instalação." src="../_images/MediaWiki_Instalation_Script.png" /></p>
+</section>
+<section id="configuracao-adicional">
+<h2>Configuração adicional<a class="headerlink" href="#configuracao-adicional" title="Permalink to this headline">#</a></h2>
+<section id="certificado-ssl">
+<h3>Certificado SSL<a class="headerlink" href="#certificado-ssl" title="Permalink to this headline">#</a></h3>
+<p>Inicialmente, é importante conseguir um certificado SSL para o site, para que possa ser usado protocolo HTTPS. Pode ser utilizado um certificado gratuito do <a class="reference external" href="https://letsencrypt.org/pt-br/">Let’s Encrypt</a>. Depois de conseguir o certificado, é importante alterar o LocalSettings para pôr o https no <code class="docutils literal notranslate"><span class="pre">$wgServer</span></code>.</p>
+</section>
+<section id="skin">
+<h3>Skin<a class="headerlink" href="#skin" title="Permalink to this headline">#</a></h3>
+<p>A skin pode ser alterada para, por exemplo, a <a class="reference external" href="https://www.mediawiki.org/wiki/Skin:Minerva_Neue">MinervaNeue</a>.</p>
+</section>
+<section id="wgdbserver">
+<h3>$wgDBServer<a class="headerlink" href="#wgdbserver" title="Permalink to this headline">#</a></h3>
+<p>Há uma propriedade no LocalSettings.php chamada <code class="docutils literal notranslate"><span class="pre">$wgDBServer</span></code>, configurada inicialmente para <code class="docutils literal notranslate"><span class="pre">localhost</span></code>. É bom mudar o valor para <code class="docutils literal notranslate"><span class="pre">127.0.0.1</span></code>, pois isso torna a wiki bem mais rápida.</p>
+</section>
+<section id="extensoes">
+<h3>Extensões<a class="headerlink" href="#extensoes" title="Permalink to this headline">#</a></h3>
+<p>É importante instalar as extensões necessárias.</p>
+</section>
+<section id="templates">
+<h3>Templates<a class="headerlink" href="#templates" title="Permalink to this headline">#</a></h3>
+<p>É importante importar os templates necessários.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./InstalacaoConfiguracao"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../SobreMediaWiki/ContasGruposPermissoes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Contas, grupos e permissões</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../EscrevendoNaWiki/EscrevendoNaWiki.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Escrevendo na Wiki</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Rodrigo Tavares<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
