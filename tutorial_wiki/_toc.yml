@@ -28,7 +28,7 @@ chapters:
     - file: EscrevendoNaWiki/InserirTemplate
     - file: EscrevendoNaWiki/InserirHint
     - file: EscrevendoNaWiki/InserirTabela
-    - file: EscrevendoNaWiki/InserirComentário
+    - file: EscrevendoNaWiki/InserirComentario
     - file: EscrevendoNaWiki/InserirGaleria
     - file: EscrevendoNaWiki/InserirBlocoCodigo
     - file: EscrevendoNaWiki/VigiarPagina
