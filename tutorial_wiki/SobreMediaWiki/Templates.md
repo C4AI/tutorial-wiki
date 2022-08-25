@@ -13,7 +13,7 @@ Para criar um template, basta criar uma página normal cujo título tem o prefix
 
 ## Baixando template de outra wiki
 
-A forma mais simples de conseguir um template usado em outra wiki é usando a página *Special:Export* dessa wiki para exportar a página do template como um arquivo XML e importando esse arquivo na página *Special:Import* da sua própria wiki. Mais detalhes sobre exportação e importação são dados na seção de [Exportação e Importação](./SobreMediaWiki/ExportImport.md).
+A forma mais simples de conseguir um template usado em outra wiki é usando a página *Special:Export* dessa wiki para exportar a página do template como um arquivo XML e importando esse arquivo na página *Special:Import* da sua própria wiki. Mais detalhes sobre exportação e importação são dados na seção de [Exportação e Importação](./ExportImport.md).
 
 ## Utilizando o template
 
