@@ -2,7 +2,33 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: Introducao
 chapters:
-- file: markdown
-- file: notebooks
+- file: SobreMediaWiki/SobreMediaWiki
+  sections:
+    - file: SobreMediaWiki/LayoutSkins
+    - file: SobreMediaWiki/Estrutura
+    - file: SobreMediaWiki/Formato
+    - file: SobreMediaWiki/Extensoes
+    - file: SobreMediaWiki/Templates
+    - file: SobreMediaWiki/ExportImport
+    - file: SobreMediaWiki/ContasGruposPermissoes
+- file: InstalacaoConfiguracao/InstalacaoConfiguracao
+- file: EscrevendoNaWiki/EscrevendoNaWiki
+  sections:
+    - file: EscrevendoNaWiki/GerenciarConta
+    - file: EscrevendoNaWiki/CriarPagina
+    - file: EscrevendoNaWiki/EditarPagina
+    - file: EscrevendoNaWiki/ExcluirPagina
+    - file: EscrevendoNaWiki/FormatarTexto
+    - file: EscrevendoNaWiki/InserirMidia
+    - file: EscrevendoNaWiki/InserirLink
+    - file: EscrevendoNaWiki/InserirRef
+    - file: EscrevendoNaWiki/InserirNre
+    - file: EscrevendoNaWiki/InserirTemplate
+    - file: EscrevendoNaWiki/InserirHint
+    - file: EscrevendoNaWiki/InserirTabela
+    - file: EscrevendoNaWiki/InserirComentário
+    - file: EscrevendoNaWiki/InserirGaleria
+    - file: EscrevendoNaWiki/InserirBlocoCodigo
+    - file: EscrevendoNaWiki/VigiarPagina
