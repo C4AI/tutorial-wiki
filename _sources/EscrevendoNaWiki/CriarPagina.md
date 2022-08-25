@@ -1,5 +1,4 @@
 (CriarPagina)=
-# Gerencia
 # Como criar uma página?
 
 ## Criar página nova
